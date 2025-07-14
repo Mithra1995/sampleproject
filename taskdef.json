@@ -8,7 +8,7 @@
   "containerDefinitions": [
     {
       "name": "mycontainer",
-      "image": "<IMAGE_URI>",
+      "image": "382828593676.dkr.ecr.us-east-1.amazonaws.com/service1",
       "portMappings": [
         {
           "containerPort": 80,
