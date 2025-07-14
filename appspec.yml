@@ -1,1 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "REPLACED_AT_DEPLOYMENT"
+        LoadBalancerInfo:
+          ContainerName: "mycontainer"
+          ContainerPort: 80
 
