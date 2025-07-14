@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "REPLACED_AT_DEPLOYMENT"
+        TaskDefinition: "arn:aws:ecs:us-east-1:382828593676:task-definition/sampleTD6:1"
         LoadBalancerInfo:
           ContainerName: "mycontainer"
           ContainerPort: 80
