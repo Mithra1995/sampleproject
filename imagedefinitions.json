@@ -1,1 +1,6 @@
-
+[
+  {
+    "name": "mycontainer",
+    "imageUri": "382828593676.dkr.ecr.us-east-1.amazonaws.com/service1"
+  }
+]
