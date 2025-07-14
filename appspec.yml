@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TASK_DEFINITION>
+        TaskDefinition: "REPLACED_BY_CODEDEPLOY"
         LoadBalancerInfo:
           ContainerName: "mycontainer"
           ContainerPort: 80
