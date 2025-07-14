@@ -57,4 +57,7 @@ app.get('/', (req, res) => {
   `);
 });
 
-
+// ✅ THIS LINE IS MANDATORY
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
