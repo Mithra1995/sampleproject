@@ -54,3 +54,14 @@ This project demonstrates how to containerize and deploy a Spring Boot microserv
 ## 📁 Project Structure
 
 <img width="626" height="273" alt="image" src="https://github.com/user-attachments/assets/1452cdcc-d07d-465d-9d7b-76b34885800e" />
+
+
+
+## 🔧 Prerequisites
+
+- AWS CLI configured
+- ECR repository created
+- ECS cluster & Fargate service created
+- Load Balancer and Target Group configured
+- IAM roles for CodePipeline and CodeBuild
+- Node.js runtime installed (locally for dev)
