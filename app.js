@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <div class="container">
-        <h1>🚀 Hello from ECS Fargate!</h1>
+        <h1>🚀 Hello from ECS Fargate Project!</h1>
         <p>This Node.js app is deployed using CodePipeline + CodeDeploy + ECS + Fargate</p>
         <a href="https://aws.amazon.com/ecs/" target="_blank">Learn More</a>
       </div>
