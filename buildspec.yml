@@ -1,9 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      docker: 20
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -12,7 +9,6 @@ phases:
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
   build:
     commands:
-      - echo Build started on `date`
       - echo Building Docker image...
       - docker build -t service1:$IMAGE_TAG .
       - docker tag service1:$IMAGE_TAG 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:$IMAGE_TAG
