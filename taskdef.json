@@ -1,1 +1,22 @@
+{
+  "family": "service1-task",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::382828593676:role/ecsTaskExecutionRole",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "mycontainer",
+      "image": "<IMAGE_URI>",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ]
+}
 
