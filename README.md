@@ -66,5 +66,5 @@ This project demonstrates how to containerize and deploy a Spring Boot microserv
 - IAM roles for CodePipeline and CodeBuild
 - Node.js runtime installed (locally for dev)
 
-#👤 Author: Mithra Balasubramaniam · GitHub: [@Mithra1995](https://github.com/Mithra1995)
+##👤 Author: Mithra Balasubramaniam · GitHub: [@Mithra1995](https://github.com/Mithra1995)
 
