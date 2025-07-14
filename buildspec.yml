@@ -10,19 +10,19 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker build -t service1:$latest .
+      - echo Building Docker image...
+      - docker build -t service1:$IMAGE_TAG .
+      - docker tag service1:$IMAGE_TAG 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:$IMAGE_TAG
       - docker tag service1:$IMAGE_TAG 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:latest
   post_build:
     commands:
-      - echo Pushing the Docker image...
+      - echo Pushing Docker image to ECR...
+      - docker push 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:$IMAGE_TAG
       - docker push 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:latest
-      - echo Writing image definitions...
-      - printf '[{"name":"mycontainer","imageUri":"%s"}]' 382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:latest > imagedefinitions.json
+      - echo Updating taskdef.json with new image tag...
+      - sed -i "s|<IMAGE_URI>|382828593676.dkr.ecr.us-east-1.amazonaws.com/service1:$IMAGE_TAG|g" taskdef.json
 
 artifacts:
   files:
-   - appspec.yaml
-   - taskdef.json
-   - imagedefinitions.json
-
+    - appspec.yaml
+    - taskdef.json
